@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
@@ -12,6 +14,7 @@ import Contact from './pages/Contact';
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex min-h-screen flex-col bg-background text-white selection:bg-primary selection:text-background">
         <Navbar />
         <main className="flex-grow">
@@ -26,6 +29,7 @@ export default function App() {
         </main>
         <Footer />
         <WhatsAppButton />
+        <ScrollToTopButton />
       </div>
     </Router>
   );
